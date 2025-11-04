@@ -29,7 +29,7 @@ void Start()
         //Update the Target Zoom to change from the default to however much I'm scrolling up or down.
         TargetZoom = TargetZoom - ScrollData;
         //Clamp the Camera and set limits to avoid zooming in or out too much
-TargetZoom = Mathf.Clamp(TargetZoom, 3, 6);
+TargetZoom = Mathf.Clamp(TargetZoom, 3, 10);
 //Lerp function to smooth the transition from size 1 to size 2, AKA from current Orthographic Size to Target Orthographic Size
 Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, TargetZoom, Time.deltaTime * ZoomSpeed);
     }
